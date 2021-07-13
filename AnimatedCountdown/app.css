@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	min-height: 100vh;
+	overflow: hidden;
+	}
+
+h4 {
+	font-size: 2rem;
+	margin: 5px;
+	text-transform: uppercase;
+	}
+
+#replay {
+	border: none;
+	background-color: #669911;
+	color: #ffffff;
+	padding: 1rem 2rem;
+	font-size: 1.3rem;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	margin: 1rem;
+	transform: scale(1);
+	}
+
+#replay:active {
+	transform: scale(0.95);
+	}
+
+#replay:focus {
+	outline: none;
+	}
+
+.counter {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(1);
+	text-align: center;
+	}
+
+.counter.hide {
+	transform: translate(-50%, -50%) scale(0);
+	animation: animateHide 0.2s ease-out;
+	}
+
+.final {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	text-align: center;
+	}
+
+.final.show {
+	transform: translate(-50%, -50%) scale(1);
+	animation: animateShow 0.2s ease-out;
+	}
+
+.nums {
+	color: #3498db;
+	font-size: 5rem;
+	position: relative;
+	overflow: hidden;
+	width: 250px;
+	height: 5rem;
+	}
+
+.nums span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(120deg);
+	transform-origin: bottom center;
+	}
+
+.nums span.in {
+	transform: translate(-50%, -50%) rotate(0);
+	animation: goIn 0.5s ease-in-out;
+	}
+
+.nums span.out {
+	animation: goOut 0.5s ease-in-out;
+	}
+
+@keyframes animateHide {
+	0% {
+		transform: translate(-50%, -50%) scale(1);
+		}
+	100% {
+		transform: translate(-50%, -50%) scale(0);
+		}
+	}
+
+@keyframes animateShow {
+	0% {
+		transform: translate(-50%, -50%) scale(0);
+		}
+	30% {
+		transform: translate(-50%, -50%) scale(1.4);
+		}
+	100% {
+		transform: translate(-50%, -50%) scale(1);
+		}
+	}
+
+@keyframes goIn {
+	0% {
+		transform: translate(-50%, -50%) rotate(120deg);
+		}
+	30% {
+		transform: translate(-50%, -50%) rotate(-20deg);
+		}
+	60% {
+		transform: translate(-50%, -50%) rotate(10deg);
+		}
+	100% {
+		transform: translate(-50%, -50%) rotate(0);
+		}
+	}
+
+@keyframes goOut {
+	0% {
+		transform: translate(-50%, -50%) rotate(0);
+		}
+	30% {
+		transform: translate(-50%, -50%) rotate(-10deg);
+		}
+	60% {
+		transform: translate(-50%, -50%) rotate(20deg);
+		}
+	100% {
+		transform: translate(-50%, -50%) rotate(-120deg);
+		}
+	}

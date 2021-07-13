@@ -1,0 +1,38 @@
+.button__ghost {
+	display: block;
+	min-width: 10rem;
+	height: 3rem;
+	font-size: 1.2rem;
+	font-family: inherit;
+	letter-spacing: 0.01rem;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: 0.2s ease;
+	margin: 0 auto;
+	line-height: 2rem;
+	background: transparent;
+	cursor: pointer;
+	}
+
+.button__ghost-white {
+	color: #e2e2e2;
+	border: 1px solid #e2e2e2;
+	}
+
+.button__ghost-white:hover {
+	color: #232323;
+	background: #e2e2e2;
+	border: 1px solid #232323;
+	}
+
+.button__ghost-dark {
+	color: #232323;
+	border: 1px solid #232323;
+	}
+
+.button__ghost-dark:hover {
+	color: #e2e2e2;
+	background: #232323;
+	border: 1px solid #232323;
+	}

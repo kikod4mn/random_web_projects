@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+	--black: #313131;
+	--white: #f1f8f9;
+	--red: #ff0e46;
+	--red-accent: #991534;
+	--blue: #1c95e5;
+	--blue-accent: #106095;
+	--green: #1ec712;
+	--green-accent: #16740f;
+	--default-box-shadow: 0 0.5rem 1rem rgba(45, 45, 45, 0.5);
+	--animation-duration: 0.2s;
+	}
+
+*, ::after, ::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	}
+
+html {
+	font-size: 62.5%;
+	}
+
+body {
+	font-family: 'Open+Sans', sans-serif;
+	font-size: 1.6rem;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	color: var(--white);
+	background-color: var(--black);
+	}
+
+.header, .footer {
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	}
+
+.header h1 {
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	padding: 1rem;
+	margin: 4rem auto;
+	font-weight: normal;
+	text-shadow: 0 -4rem rgba(140, 140, 140, 0.1), 0 4rem rgba(140, 140, 140, 0.1);
+	}
+
+.score {
+	display: flex;
+	width: 80vw;
+	align-items: center;
+	justify-content: space-between;
+	margin: 2rem auto;
+	padding: 4rem 10rem;
+	border-radius: 0.4rem;
+	box-shadow: var(--default-box-shadow);
+	background-color: var(--red-accent);
+	}
+
+.score h4 {
+	letter-spacing: 2px;
+	font-weight: normal;
+	}
+
+.main.game__area {}
+
+.main .controls {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	}
+
+.game__button {
+	background-color: var(--blue);
+	font-size: 6rem;
+	margin: 0.5rem 1rem;
+	padding: 1rem 3rem;
+	color: var(--white);
+	border: none;
+	cursor: pointer;
+	border-radius: 0.4rem;
+	transition: background-color var(--animation-duration) linear,
+	color var(--animation-duration) linear;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	}
+
+.game__button i {
+	width: 100%;
+	text-align: center;
+	}
+
+.game__button span {
+	text-transform: uppercase;
+	display: inline-block;
+	width: 100%;
+	margin-top: 1rem;
+	font-size: 1.8rem;
+	text-align: center;
+	}
+
+.game__button:hover {
+	color: var(--red);
+	background-color: var(--blue-accent);
+	}
+
+.game__button:active {
+	transform: scale(0.98);
+	}
+
+.game__button:focus {
+	outline: none;
+	}
+
+.message {
+	width: 80vw;
+	color: var(--black);
+	background-color: var(--white);
+	border-radius: 0.4rem;
+	box-shadow: var(--default-box-shadow);
+	margin: 2rem auto;
+	padding: 4rem 3rem;
+	text-align: center;
+	}
+
+.hidden {
+	display: none;
+	}
+
+.invisible {
+	visibility: hidden;
+	}

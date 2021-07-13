@@ -1,0 +1,46 @@
+.button__duo-line {
+	font-family: inherit;
+	text-decoration: none;
+	color: var(--text-main-color);
+	transition: color 0.4s ease-in-out;
+	cursor: pointer;
+	padding: 0.4rem 1.5rem;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	border: none;
+	background-color: transparent;
+	display: block;
+	margin: 0 auto;
+	}
+
+.button__duo-line:hover {
+	color: var(--link-main-color);
+	}
+
+.button__duo-line::before,
+.button__duo-line::after {
+	content: '';
+	display: block;
+	border-bottom: 2px solid var(--link-main-color);
+	transition: transform 0.4s ease-in-out;
+	}
+
+.button__duo-line::before {
+	transform: scaleX(0);
+	transform-origin: 100% 50%;
+	}
+
+.button__duo-line:hover::before {
+	transform: scaleX(1);
+	transform-origin: 0 50%;
+	}
+
+.button__duo-line::after {
+	transform: scaleX(0);
+	transform-origin: 0 50%;
+	}
+
+.button__duo-line:hover::after {
+	transform: scaleX(1);
+	transform-origin: 100% 50%;
+	}

@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Open Sans&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	}
+
+.slider__container {
+	position: relative;
+	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
+	}
+
+.left__slide {
+	width: 35%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all 0.5s ease-in-out;
+	}
+
+.left__slide > div {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: #f1f1f1;
+	}
+
+.left__slide h1 {
+	font-size: 3rem;
+	margin-bottom: 0.8rem;
+	margin-top: -2rem;
+	}
+
+.right__slide {
+	height: 100%;
+	width: 65%;
+	position: absolute;
+	top: 0;
+	left: 35%;
+	transition: all 0.5s ease-in-out;
+	}
+
+.right__slide > div {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	height: 100%;
+	width: 100%;
+	}
+
+.slider__container .slider__actions button {
+	position: absolute;
+	left: 35%;
+	top: 50%;
+	z-index: 100;
+	background-color: #f1f1f1;
+	color: #999999;
+	cursor: pointer;font-size: 1rem;
+	padding: 1rem;
+	border: none;
+	transition: all 0.3s ease-in-out;
+	}
+
+.slider__container .slider__actions button:hover {
+	color: #222222;
+	}
+
+.slider__container .slider__actions button:focus {
+	outline: none;
+	}
+
+.slider__container .slider__actions .down__button {
+	transform: translateX(-100%);
+	border-radius: 0.5rem 0 0 0.5rem;
+	}
+
+.slider__container .slider__actions .up__button {
+	transform: translateY(-100%);
+	border-radius: 0 0.5rem 0.5rem 0;
+	}

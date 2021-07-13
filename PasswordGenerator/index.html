@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Password Generator</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="container">
+	<h2>Password Generator</h2>
+	<div class="result__container">
+		<span id="result"></span>
+		<button class="btn" id="clipboard"><i class="far fa-clipboard"></i></button>
+	</div>
+	<div class="settings">
+		<div class="setting">
+			<label for="passwordLength">Password Length</label>
+			<input id="passwordLength" type="number" min="4" max="8096" value="20">
+		</div>
+		<div class="setting">
+			<label for="useUppercase">Use uppercase letters</label>
+			<input type="checkbox" id="useUppercase" checked="checked">
+		</div>
+		<div class="setting">
+			<label for="useLowercase">Use lowercase letters</label>
+			<input type="checkbox" id="useLowercase" checked="checked">
+		</div>
+		<div class="setting">
+			<label for="useNumber">Use numbers</label>
+			<input type="checkbox" id="useNumber" checked="checked">
+		</div>
+		<div class="setting">
+			<label for="useSymbol">Use symbols</label>
+			<input type="checkbox" id="useSymbol" checked="checked">
+		</div>
+	</div>
+	<button class="btn btn__large" id="generate">Generate Password</button>
+</div>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

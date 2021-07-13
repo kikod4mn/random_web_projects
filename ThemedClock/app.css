@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+
+:root {
+	--primary-color: #232323;
+	--primary-color-accent: #aaaaaa;
+	--secondary-color: #f3f3f3;
+	--red-color: #e74c3c;
+	}
+
+html.dark {
+	--primary-color: #f3f3f3ff;
+	--secondary-color: #232323;
+	}
+
+html {
+	background-color: var(--secondary-color);
+	color: var(--primary-color);
+	transition: all 0.5s ease;
+	}
+
+html.dark {
+	background-color: var(--secondary-color);
+	color: var(--primary-color);
+	}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	}
+
+body {
+	font-family: 'Heebo', sans-serif;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	}
+
+.theme__toggle {
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+	border: 0;
+	border-radius: 0.2rem;
+	padding: 0.5rem 1rem;
+	position: absolute;
+	cursor: pointer;
+	top: 5rem;
+	}
+
+.theme__toggle:focus {
+	outline: none;
+	}
+
+.clock__container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	}
+
+.clock {
+	position: relative;
+	width: 12rem;
+	height: 12rem;
+	}
+
+.needle {
+	background-color: var(--primary-color);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 5rem;
+	width: 0.2rem;
+	transform-origin: bottom center;
+	transition: all 0.5s ease-in;
+	}
+
+.needle.hour {
+	transform: translate(-50%, -100%) rotate(0);
+	}
+
+.needle.minute {
+	transform: translate(-50%, -100%) rotate(0);
+	height: 6rem;
+	}
+
+.needle.second {
+	transform: translate(-50%, -100%) rotate(0);
+	height: 6rem;
+	width: 0.1rem;
+	background-color: var(--red-color);
+	}
+
+.clock__center {
+	background-color: var(--red-color);
+	width: 0.7rem;
+	height: 0.7rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	}
+
+.clock__center:after {
+	content: '';
+	background-color: var(--primary-color);
+	width: 0.3rem;
+	height: 0.3rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	}
+
+.time {
+	font-size: 5rem;
+	}
+
+.date {
+	color: var(--primary-color-accent);
+	font-size: 0.8rem;
+	letter-spacing: 0.2rem;
+	text-transform: uppercase;
+	}
+
+.date .circle {
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+	border-radius: 50%;
+	height: 1.4rem;
+	width: 1.4rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1.4rem;
+	transition: 0.5s ease-in;
+	font-size: 0.8rem;
+	}
