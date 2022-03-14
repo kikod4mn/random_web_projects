@@ -55,40 +55,55 @@ body {
 	background: transparent;
 	cursor: pointer;
 	padding: 2rem 4rem;
+	}
+
+.button__liquid {
+	font-family: Impact, serif;
+	position: relative;
+	width: 250px;
+	height: 80px;
+	border-radius: 10px;
+	background: none;
+	border: none;
 	outline: none;
+	font-size: 40px;
+	text-transform: uppercase;
+	color: #ffffff;
+	z-index: 99;
+	cursor: pointer;
 	}
 
-.button {
-	color: var(--black);
-	border: 1px solid var(--black);
-	}
-
-.button:hover {
-	color: var(--white);
-	background: var(--black);
-	border: 1px solid var(--black);
-	}
-
-.messages {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	width: 80vw;
-	min-height: 6rem;
-	font-size: 2rem;
-	padding: 2rem 3rem;
-	margin: 1.5rem auto;
-	box-shadow: var(--default-box-shadow);
-	background-color: var(--black);
-	border-radius: 0.4rem;
-	color: var(--white);
-	border: 1px solid var(--white);
-	text-align: center;
-	}
-
-.message {
-	display: block;
+.button__liquid:before {
+	content: "";
+	background: #000000;
 	width: 100%;
-	margin: 1.5rem auto;
+	height: 100%;
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	}
+
+.button__liquid:hover {
+	animation: liquidixe 0.5s;
+	}
+
+.button__liquid:hover:before {
+	background: linear-gradient(to right, red, green, blue);
+	filter: url('#wave');
+	}
+
+@keyframes liquidixe {
+	0% {
+		transform: scaleY(1);
+		}
+	60% {
+		transform: scaleY(1.5);
+		}
+	80% {
+		transform: scaleY(0.9);
+		}
+	100% {
+		transform: scaleY(1);
+		}
 	}

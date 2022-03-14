@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Expanding Cards</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div style="background: #333333; padding: 1rem 3rem; display: flex; align-items:center; justify-content:space-around;">
+	<button class="button__liquid">Liquid One</button>
+	<button class="button__liquid">Liquid Two</button>
+	<button class="button__liquid">Liquid Three</button>
+</div>
+<svg>
+	<defs>
+		<filter id="wave">
+			<feTurbulence
+				type="fractalNoise" baseFrequency="0.00001 0.0001" numOctaves="1" result="warp"
+			/>
+			<feDisplacementMap
+				in="SourceGraphic" in2="warpOffset" xChannelSelector="R" yChannelSelector="G" scale="30"
+			/>
+		</filter>
+	</defs>
+</svg>
+<script type="text/javascript" src="app.js" defer></script>
+</body>
+</html>

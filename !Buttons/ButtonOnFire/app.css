@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+	--black: #1d1d1d;
+	--grey: #647687;
+	--white: #f1f1f1;
+	--red: #ee1111;
+	--dark-red: #b91d47;
+	--blue: #2d89ef;
+	--dark-blue: #2b5797;
+	--yellow: #ffc40d;
+	--orange: #f2552c;
+	--green: #60a917;
+	--dark-green: #008a00;
+	--pink: #ff0097;
+	--purple: #9f00a7;
+	--default-box-shadow: 0 0.5rem 1rem rgba(45, 45, 45, 0.5);
+	}
+
+*, ::after, ::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	}
+
+html {
+	font-size: 62.5%;
+	}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	overflow: hidden;
+	background: #000000;
+	}
+
+#canvas1 {
+	background: #000000;
+	filter: blur(10px) contrast(5);
+	}
+
+.buttons {
+	position: absolute;
+	top: 30%;
+	left: 0;
+	width: 100vw;
+	}
+
+.button {
+	line-height: 11rem;
+	min-width: 30rem;
+	height: 12rem;
+	font-size: 4rem;
+	font-family: inherit;
+	font-weight: 900;
+	color: #ffffff;
+	letter-spacing: 0.01rem;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 0.5s;
+	margin: 2rem auto;
+	background: transparent;
+	cursor: pointer;
+	padding: 2rem 4rem;
+	outline: none;
+	position: relative;
+	border: 0.2rem solid #ffffff;
+	border-radius: 3rem;
+	}
+
+.button:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	border-radius: 3rem;
+	transition: 0.5s;
+	}
+
+.button:nth-child(1):before {
+	content: "Click Me 1";
+	}
+
+.button:nth-child(2):before {
+	content: "Click Me 2";
+	}
+
+.button:nth-child(3):before {
+	content: "Click Me 3";
+	}
+
+.button:hover:before {
+	color: #ffff00;
+	box-shadow: inset 1rem 1rem 1.5rem #ffa500, inset -1rem -1rem 1.5rem #ffa500, inset -1rem 1rem 1.5rem #ffa500, inset 1rem -1rem 1.5rem #ffa500;
+	background-color: #ffff00;
+	text-shadow: 0.5rem 0.5rem 0.5rem #ffa500, -0.5rem -0.5rem 0.5rem #ffa500, -0.5rem 0.5rem 0.5rem #ffa500, 0.5rem -0.5rem 0.5rem #ffa500;
+	}
+
+.button:hover {
+	box-shadow: 1rem 1rem 1.5rem #ffa500, -1rem -1rem 1.5rem #ffa500, -1rem 1rem 1.5rem #ffa500, 1rem -1rem 1.5rem #ffa500;
+	border: 0.5rem solid #ffa500;
+	background-color: #ffa500;
+	}
